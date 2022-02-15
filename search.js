@@ -25,13 +25,26 @@ let output = [];
 
 let searchStr = 'laptop';
 
-for(let keys of arrayStringScearch){
+// for(let keys of arrayStringScearch){
 
-    if(keys.toLowerCase().indexOf(searchStr.toLowerCase())!= -1){
+//     if(keys.toLowerCase().indexOf(searchStr.toLowerCase())!= -1){
 
-        output.push(keys);
+//         output.push(keys);
+//     }
+// }
+
+for(let key of arrayStringScearch){
+
+    if(key.toLocaleLowerCase().includes(searchStr.toLowerCase())){
+        output.push(key);
     }
 }
 
+//console.log(output);
 
-console.log(output);
+
+const word = anthem.split(' ');
+// console.log(word);
+
+const splitWithA  = anthem.split('a');
+console.log(splitWithA);
