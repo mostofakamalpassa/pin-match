@@ -25,3 +25,29 @@ document.getElementById('generate-pin').addEventListener('click', function(e){
     inputPin.value = getPin();
 
 })
+
+document.getElementById('key-match').addEventListener('click', function(e){
+const buttonNumber = e.target.innerText;
+    const inputNumbers = document.getElementById('input-numbers');
+
+    if(!isNaN(buttonNumber)){
+        const priviusNumber = inputNumbers.value;
+        const newNumbers = priviusNumber + buttonNumber;
+    
+        inputNumbers.value = newNumbers;
+    }
+
+    if(buttonNumber.toLowerCase() == 'c'){
+        inputNumbers.value = '';
+    }
+    if(buttonNumber.toLowerCase() == '<'){
+        let convertToArray =  Array.from(  inputNumbers.value);
+
+        convertToArray.pop();
+    
+        inputNumbers.value =   convertToArray.join('');
+        
+        
+    }
+   
+})
