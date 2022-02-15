@@ -60,9 +60,20 @@ document.getElementById('submit-pin').addEventListener('click', function(e){
     const generateParse = parseInt(generatePin.value);
 
     if(inputNumberParese === generateParse){
+      const success =   document.getElementById('success');
+        success.style.display ='block';
         console.log('matech pin ', generateParse);
+        setTimeout(function(){
+            success.style.display = 'none';
+        },2000)
     }else{
+        const errorMessage = document.getElementById('error');
 
+        errorMessage.style.display ='block';
+
+        setTimeout(function(e){
+            errorMessage.style.display = 'none';
+        }, 2000);
         console.log('not match pin ')
     }
     
