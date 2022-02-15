@@ -47,4 +47,13 @@ const word = anthem.split(' ');
 // console.log(word);
 
 const splitWithA  = anthem.split('a');
-console.log(splitWithA);
+//console.log(splitWithA);
+
+
+const sliceWord = anthem.slice(5,11);
+
+// console.log(sliceWord);
+
+const substar = anthem.substr(5,5);
+
+console.log(substar);
