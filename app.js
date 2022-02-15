@@ -51,3 +51,20 @@ const buttonNumber = e.target.innerText;
     }
    
 })
+
+document.getElementById('submit-pin').addEventListener('click', function(e){
+    const inputNumber = document.getElementById('input-numbers');
+    const generatePin = document.getElementById('input-pin');
+
+    const inputNumberParese = parseInt(inputNumber.value);
+    const generateParse = parseInt(generatePin.value);
+
+    if(inputNumberParese === generateParse){
+        console.log('matech pin ', generateParse);
+    }else{
+
+        console.log('not match pin ')
+    }
+    
+    
+})
